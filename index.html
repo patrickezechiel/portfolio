@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+    <script>
+        function updateContent(title, description) {
+            document.getElementById('content-title').innerText = title;
+            document.getElementById('content-description').innerText = description;
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="name">
+            <h1>Patrick Kouadio</h1>
+            <p>Data Scientist</p>
+        </div>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/patrick-kouadio-544484276/" target="_blank">
+                <img src="Linkedin.png" alt="LinkedIn Logo" class="social-logo">
+            </a>
+            <a href="https://github.com/patrickezechiel" target="_blank">
+                <img src="GitHub-Logo.wine.png" alt="GitHub Logo" class="social-logo">
+            </a>
+        </div>
+    </div>
+    <div class="portfolio-container">
+        <div class="card" onclick="updateContent('MATLAB', 'Description of project 1.')">
+            <img src="path/to/image1.jpg" alt="Project 1 Image" class="card-image">
+            <h3>MATLAB</h3>
+        </div>
+        <div class="card" onclick="updateContent('Coursera', 'Description of project 2.')">
+            <img src="path/to/image2.jpg" alt="Project 2 Image" class="card-image">
+            <h3>Coursera</h3>
+        </div>
+        <div class="card" onclick="updateContent('Google Cloud', 'Description of project 3.')">
+            <img src="path/to/image3.jpg" alt="Project 3 Image" class="card-image">
+            <h3>Google Cloud</h3>
+        </div>
+    </div>
+    <div id="content-display">
+        <h2 id="content-title">Select a project</h2>
+        <p id="content-description">...</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.portfolio-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.card {
+    position: relative; /* Set position to relative for the pseudo-element */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card-image {
+    width: 100%; /* Make the image take the full width of the card */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px 8px 0 0; /* Round the top corners of the image */
+}
+
+.card::before {
+    content: ""; /* Create a pseudo-element */
+    position: absolute; /* Position it absolutely within the card */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+    border-radius: 8px 8px 0 0; /* Match the image border radius */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for the overlay */
+}
+
+.card:hover::before {
+    opacity: 1; /* Show the overlay on hover */
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-logo {
+    width: 40px; /* Set the width of the logos */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 10px; /* Add some space between logos */
+}
+
+#content-display {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between; /* Space between name and social links */
+    align-items: center; /* Center items vertically */
+    padding: 20px;
+}
+
+.name {
+    font-size: 24px; /* Adjust font size for your name */
+    font-weight: bold; /* Make the name bold */
+}
